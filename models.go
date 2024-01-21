@@ -1,7 +1,8 @@
 package main
 
 type Event struct {
-	Name string
+	Name string `json:"what is your name?"`
+	Age  int    `json:"how old are you"`
 }
 
 type Response struct {
