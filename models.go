@@ -6,4 +6,5 @@ type Event struct {
 }
 
 type Response struct {
+	Message string `json:"answer"`
 }
