@@ -1,0 +1,4 @@
+$env:GOOS="linux"; $env:GOARCH="amd64"; go build -o main
+aws lambda create-function --function-name go-lambda --zip-file fileb://function.zip --handler main --runtime go1.x --role arn:aws:iam::211125390412:role/lambda-ex
+aws lambda delete-function --function-name go-lambda
+aws lambda invoke --function-name go-lambda --cli-binary-format raw-in-base64-out --payload fileb://payload.json output.txt
